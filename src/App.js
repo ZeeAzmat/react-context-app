@@ -2,6 +2,7 @@ import React from 'react';
 import Navbar from './components/Navbar';
 import BookList from './components/BookList';
 import ThemeToggle from './components/ThemeToggle';
+import BookContextProvider from './contexts/BookContext';
 import AuthContextProvider from './contexts/AuthContext';
 import ThemeContextProvider from './contexts/ThemeContext';
 
@@ -11,7 +12,11 @@ const App = () => {
       <ThemeContextProvider>
         <AuthContextProvider>
           <Navbar />
-          <BookList />
+
+          <BookContextProvider>
+            <BookList />
+          </BookContextProvider>
+
           <ThemeToggle />
         </AuthContextProvider>
       </ThemeContextProvider>
