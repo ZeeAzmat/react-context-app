@@ -11,5 +11,5 @@ class ThemeToggle extends Component {
     );
   }
 }
- 
+
 export default ThemeToggle;
