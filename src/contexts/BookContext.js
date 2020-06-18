@@ -12,8 +12,16 @@ const BookContextProvider = props => {
     { title: "Rich Dad Poor Dad", id: uuidv4() },
   ]);
 
+  const addBook = title => {
+    setBookList([...bookList, {title, id: uuidv4()}]);
+  };
+
+  const removeBook = bookId => {
+    setBookList(bookList.filter((book) => book.id !== bookId));
+  };
+
   return (
-    <BookContext.Provider value={{ bookList }}>
+    <BookContext.Provider value={{ bookList, addBook, removeBook }}>
       { props.children }
     </BookContext.Provider>
   );
