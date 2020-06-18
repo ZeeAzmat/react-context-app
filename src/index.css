@@ -33,17 +33,17 @@ li {
   margin: 20px;
 }
 .book-list ul{
-  padding: 0;
+  padding: 8px;
   list-style-type: none;
 }
-.book-list li{
+.book-list li {
   background: #6d3d6d;
   border-radius: 4px;
   padding: 10px;
   cursor: pointer;
-  margin: 10px 0;
+  margin: 10px;
 }
-.book-list li:hover{
+.book-list li:hover {
   opacity: 0.7;
   text-decoration: line-through;
 }

@@ -4,7 +4,7 @@ import { bookReducer } from '../reducers/BookReducer';
 export const BookContext = createContext();
 
 const BookContextProvider = props => {
-  const [bookList, dispatch] = useReducer(bookReducer, []);
+  const [bookList, dispatch] = useReducer(bookReducer, JSON.parse(localStorage.getItem('bookList')) || []);
 
   return (
     <BookContext.Provider value={{ bookList, dispatch }}>
@@ -12,5 +12,5 @@ const BookContextProvider = props => {
     </BookContext.Provider>
   );
 }
- 
+
 export default BookContextProvider;
